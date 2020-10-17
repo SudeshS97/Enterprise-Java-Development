@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Assignment 2</title>
+<link rel="stylesheet" href="/Assignment2.css">
+</head>
+<body>
+	<h1>Welcome to Fresh Oranges!</h1>
+	<div class="reviewTable">
+		<h2>Check out some Fresh reviews below!</h2>
+		<table th:i="${reviewList != null AND reviewList != ''}">
+			<tr>
+				<th>Name</th>
+				<th>Rating</th>
+				<th>Review</th>
+				<th>Streaming Service</th>
+				<th>Date Written</th>
+			</tr>
+			<tr th:each="r:${reviewList}">
+				<td th:text="${r.name}"></td>
+				<td th:text="${r.userRating}"></td>
+				<td class="review" th:text="${r.review}"></td>
+				<td th:text="${r.streamingService}"></td>
+				<td th:text="${r.dateTime}"></td>
+			</tr>
+		</table>
+	</div>
+
+
+
+	<form method="post" action="#" th:action="@{/insertReview}"
+		th:object="${review}">
+		<h3>Please leave a review!</h3>
+		<input type="hidden" name="id" th:field="*{id}" /> 
+		<label>Movie Title:</label> <input type="text" class="title" name="name"
+			th:field="*{name}" /><br>
+		<br>
+		<br> <label>Rating out of 10:</label> <input type="number"
+			max="10" min="1" name="userRating" th:field="*{userRating}" /><br>
+		<br>
+		<br> <label>Available where?</label> <input type="text"
+			name="streamingService" th:field="*{streamingService}" /><br>
+		<br>
+		<textarea placeholder="Please type review here." th:field="*{review}"></textarea>
+		<br>
+		<br>
+		<br> <input type="hidden" name="dateTime" th:field="*{dateTime}" />
+		<input type="submit" value="Go!" />
+	</form>
+
+</body>
+</html>

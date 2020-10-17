@@ -1,0 +1,93 @@
+@charset "ISO-8859-1";
+
+body {
+	background-color: orange;
+	font-family: arial;
+}
+
+h1 {
+	color: white;
+	position: relative;
+	left: 50;
+}
+
+h2 {
+	color: white;
+	position: relative;
+	left: 50;
+}
+
+form {
+	border: 5px solid grey;
+	border-collapse: collapse;
+	border-radius: 10px;
+	font-family: arial;
+	background-color: #8FBC8F;
+	height: 375px;
+	width: 600px;
+	padding: 15px;
+	position: relative;
+	left: 410px;
+	top: 75px;
+	bottom: 50px;
+}
+
+input[type=textarea] {
+	color: grey;
+	rows: 30;
+	cols: 500;
+}
+
+input[type=submit] {
+	padding: 5px;
+	border-radius: 5px;
+	width: 150px;
+	padding-left: 15px;
+	position: absolute;
+	bottom: 10px;
+}
+
+input[type=text], input[type=number] {
+	position: relative;
+	left: 100px;
+}
+
+label {
+	padding-left: 15px;
+	color: white;
+}
+
+h3 {
+	color: white;
+	text-shadow: 2px 2px #FF8C00;
+	padding: 5px;
+	text-align: center;
+}
+
+textarea {
+	width: 600px;
+	height: 110px;
+	font-family: arial;
+}
+
+table {
+	border-collapse: collapse;
+	border-radius: 5px;
+	position: relative;
+	left: 150px;
+}
+
+table, th, td {
+	border: 2px solid red;
+	background-color: #FF7F50;
+}
+
+th, td {
+	height: 50px;
+	width: 175px;
+	text-align: center;
+}
+
+.review {
+	width: 300px;
+}
